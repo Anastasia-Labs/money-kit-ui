@@ -1,8 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   
-  output: 'standalone',
+  output: 'export',
   reactStrictMode: true,
+  basePath: "/money-kit-ui",
+  images: {
+    unoptimized: true,
+    domains: ['avatars.githubusercontent.com'],
+  },
   webpack: (config) => {
     config.experiments = { 
       asyncWebAssembly: true,
